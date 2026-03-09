@@ -1,0 +1,4 @@
+/home/francesco/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/francesco/CLionProjects/E1_class_exercise -B /home/francesco/CLionProjects/E1_class_exercise/cmake-build-debug
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/francesco/CLionProjects/E1_class_exercise/cmake-build-debug

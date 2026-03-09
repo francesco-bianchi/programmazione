@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/francesco/CLionProjects/E1_class_exercise/cmake-build-debug",
+  "command": "/usr/bin/c++   -g -std=gnu++11 -fdiagnostics-color=always -o CMakeFiles/E1_class_exercise.dir/main.cpp.o -c /home/francesco/CLionProjects/E1_class_exercise/main.cpp",
+  "file": "/home/francesco/CLionProjects/E1_class_exercise/main.cpp",
+  "output": "CMakeFiles/E1_class_exercise.dir/main.cpp.o"
+},
+{
+  "directory": "/home/francesco/CLionProjects/E1_class_exercise/cmake-build-debug",
+  "command": "/usr/bin/c++   -g -std=gnu++11 -fdiagnostics-color=always -o CMakeFiles/E1_class_exercise.dir/Dungeon.cpp.o -c /home/francesco/CLionProjects/E1_class_exercise/Dungeon.cpp",
+  "file": "/home/francesco/CLionProjects/E1_class_exercise/Dungeon.cpp",
+  "output": "CMakeFiles/E1_class_exercise.dir/Dungeon.cpp.o"
+},
+{
+  "directory": "/home/francesco/CLionProjects/E1_class_exercise/cmake-build-debug",
+  "command": "/usr/bin/c++   -g -std=gnu++11 -fdiagnostics-color=always -o CMakeFiles/E1_class_exercise.dir/GameCharacter.cpp.o -c /home/francesco/CLionProjects/E1_class_exercise/GameCharacter.cpp",
+  "file": "/home/francesco/CLionProjects/E1_class_exercise/GameCharacter.cpp",
+  "output": "CMakeFiles/E1_class_exercise.dir/GameCharacter.cpp.o"
+},
+{
+  "directory": "/home/francesco/CLionProjects/E1_class_exercise/cmake-build-debug",
+  "command": "/usr/bin/c++   -g -std=gnu++11 -fdiagnostics-color=always -o CMakeFiles/E1_class_exercise.dir/Weapon.cpp.o -c /home/francesco/CLionProjects/E1_class_exercise/Weapon.cpp",
+  "file": "/home/francesco/CLionProjects/E1_class_exercise/Weapon.cpp",
+  "output": "CMakeFiles/E1_class_exercise.dir/Weapon.cpp.o"
+}
+]
