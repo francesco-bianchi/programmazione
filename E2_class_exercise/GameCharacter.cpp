@@ -61,14 +61,16 @@ void GameCharacter::setArmor(int defense) {
 bool GameCharacter::fight(GameCharacter &enemy) {
     bool success = false;
     Dice* d = new Dice();
-    int resultRoll = d->roll(1); //TODO finire
+    int resultRoll = d->roll(1);
+    cout << "Numero dado" << resultRoll << endl;
     int hit = 1;
     if (weapon)
         hit = weapon->use();
 
     int damage = 0;
     if (hit > enemy.getArmor()) {
-        damage = enemy.receiveDamage(hit);
+        if (resultRoll > 3)
+            damage = enemy.receiveDamage(hit);
     }
 
     if (damage) {

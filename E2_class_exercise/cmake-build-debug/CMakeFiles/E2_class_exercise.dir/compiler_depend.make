@@ -255,6 +255,7 @@ CMakeFiles/E2_class_exercise.dir/Dungeon.cpp.o: /home/francesco/CLionProjects/E2
   /usr/lib/gcc/x86_64-redhat-linux/15/include/stddef.h
 
 CMakeFiles/E2_class_exercise.dir/GameCharacter.cpp.o: /home/francesco/CLionProjects/E2_class_exercise/GameCharacter.cpp \
+  /home/francesco/CLionProjects/E2_class_exercise/Dice.h \
   /home/francesco/CLionProjects/E2_class_exercise/GameCharacter.h \
   /home/francesco/CLionProjects/E2_class_exercise/Weapon.h \
   /usr/include/alloca.h \
@@ -277,9 +278,19 @@ CMakeFiles/E2_class_exercise.dir/GameCharacter.cpp.o: /home/francesco/CLionProje
   /usr/include/bits/errno.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
+  /usr/include/bits/flt-eval-method.h \
+  /usr/include/bits/fp-fast.h \
+  /usr/include/bits/fp-logb.h \
+  /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/libm-simd-decl-stubs.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
+  /usr/include/bits/math-vector.h \
+  /usr/include/bits/mathcalls-helper-functions.h \
+  /usr/include/bits/mathcalls-macros.h \
+  /usr/include/bits/mathcalls-narrow.h \
+  /usr/include/bits/mathcalls.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -384,6 +395,7 @@ CMakeFiles/E2_class_exercise.dir/GameCharacter.cpp.o: /home/francesco/CLionProje
   /usr/include/c++/15/cctype \
   /usr/include/c++/15/cerrno \
   /usr/include/c++/15/clocale \
+  /usr/include/c++/15/cmath \
   /usr/include/c++/15/cstdio \
   /usr/include/c++/15/cstdlib \
   /usr/include/c++/15/ctime \
@@ -434,6 +446,7 @@ CMakeFiles/E2_class_exercise.dir/GameCharacter.cpp.o: /home/francesco/CLionProje
   /usr/include/linux/stddef.h \
   /usr/include/linux/types.h \
   /usr/include/locale.h \
+  /usr/include/math.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -695,6 +708,16 @@ CMakeFiles/E2_class_exercise.dir/Weapon.cpp.o:
 
 /home/francesco/CLionProjects/E2_class_exercise/Weapon.cpp:
 
+/usr/include/math.h:
+
+/usr/include/bits/mathcalls-narrow.h:
+
+/usr/include/bits/math-vector.h:
+
+/usr/include/bits/iscanonical.h:
+
+/usr/include/bits/fp-fast.h:
+
 /home/francesco/CLionProjects/E2_class_exercise/GameCharacter.h:
 
 /home/francesco/CLionProjects/E2_class_exercise/GameCharacter.cpp:
@@ -767,6 +790,8 @@ CMakeFiles/E2_class_exercise.dir/Weapon.cpp.o:
 
 /usr/include/c++/15/bits/stl_iterator.h:
 
+/usr/include/bits/mathcalls-helper-functions.h:
+
 /usr/include/c++/15/cwchar:
 
 /usr/include/c++/15/bits/stl_function.h:
@@ -808,6 +833,8 @@ CMakeFiles/E2_class_exercise.dir/Dice.cpp.o:
 /usr/include/bits/uintn-identity.h:
 
 /usr/include/bits/typesizes.h:
+
+/usr/include/c++/15/cmath:
 
 /usr/include/endian.h:
 
@@ -995,6 +1022,8 @@ CMakeFiles/E2_class_exercise.dir/GameCharacter.cpp.o:
 
 /usr/include/asm-generic/errno-base.h:
 
+/usr/include/bits/fp-logb.h:
+
 /usr/include/asm-generic/errno.h:
 
 /usr/include/asm/types.h:
@@ -1015,9 +1044,13 @@ CMakeFiles/E2_class_exercise.dir/GameCharacter.cpp.o:
 
 /usr/include/bits/pthread_stack_min-dynamic.h:
 
+/usr/include/bits/flt-eval-method.h:
+
 /usr/include/bits/types/FILE.h:
 
 /usr/include/bits/types/__fpos64_t.h:
+
+/usr/include/bits/mathcalls.h:
 
 /usr/include/bits/types/clock_t.h:
 
@@ -1063,6 +1096,8 @@ CMakeFiles/E2_class_exercise.dir/GameCharacter.cpp.o:
 
 /usr/include/c++/15/bits/basic_string.tcc:
 
+/usr/include/bits/libm-simd-decl-stubs.h:
+
 /home/francesco/CLionProjects/E2_class_exercise/Dice.h:
 
 /usr/include/c++/15/bits/ostream.h:
@@ -1100,6 +1135,8 @@ CMakeFiles/E2_class_exercise.dir/main.cpp.o:
 /usr/include/c++/15/bits/localefwd.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/15/crtbegin.o:
+
+/usr/include/bits/mathcalls-macros.h:
 
 /usr/include/asm-generic/int-ll64.h:
 

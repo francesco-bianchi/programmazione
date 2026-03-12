@@ -138,4 +138,5 @@ CMakeFiles/E2_class_exercise.dir/GameCharacter.cpp.o: \
  /usr/include/c++/15/bits/locale_facets.tcc \
  /usr/include/c++/15/bits/basic_ios.tcc \
  /usr/include/c++/15/bits/ostream.tcc /usr/include/c++/15/istream \
- /usr/include/c++/15/bits/istream.tcc
+ /usr/include/c++/15/bits/istream.tcc \
+ /home/francesco/CLionProjects/E2_class_exercise/Dice.h
