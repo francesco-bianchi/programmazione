@@ -4,20 +4,23 @@
 
 #ifndef E3_INHERITANCE_EXERCISE_SKELETON_H
 #define E3_INHERITANCE_EXERCISE_SKELETON_H
+#include "GameCharacter.h"
 
-
-// TODO extend GameCharacter
-class Skeleton {
+#include "GameCharacter.h"
+class Skeleton : public GameCharacter{
 public:
-    // TODO add magicRecover param in c'tor
+    explicit Skeleton(bool mr)
+            : magicRecover(mr) {
+        }
 
-    // TODO override receiveDamage(int points);
     // XXX it's already implemented in .cpp file
+
+    int receiveDamage(int points) override;
 
     // XXX no need to override other base class methods in this class
 
     // override base class method
-    char getCharacterSymbol() const {
+    char getCharacterSymbol() const override {
         return 'S';
     }
 

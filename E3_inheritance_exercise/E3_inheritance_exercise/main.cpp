@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 
 #include "Dungeon.h"
 #include "GameCharacter.h"
@@ -7,6 +8,7 @@
 #include "Sword.h"
 #include "Bow.h"
 #include "Orc.h"
+#include "Skeleton.h"
 
 // enum class
 enum class GameEvent {
@@ -135,12 +137,14 @@ bool updateGame(const GameEvent &gameEvent, GameCharacter &hero, GameCharacter &
 }
 
 // render Head Up Display
-void renderHUD(GameCharacter &hero) {
+void renderHUD(GameCharacter &hero, GameCharacter &enemy) {
     std::cout << "Press: w,a,s,d,f or Q to quit." << std::endl;
     std::cout << "Hero - HP: " << hero.getHP() << " - armor: " << hero.getArmor();
     if (hero.getWeapon() != nullptr)
         std::cout << " - Weapon strength: " << hero.getWeapon()->getStrength();
     std::cout << std::endl;
+
+    std::cout << "Enemy - HP: " << enemy.getHP() << " - armor: " << enemy.getArmor() <<std::endl;
 }
 
 bool checkMonsterPosition(int x, int y,const GameCharacter& enemy, char& renderSymbol) {
@@ -156,7 +160,7 @@ void renderGame(Dungeon &map, GameCharacter &hero, GameCharacter& enemy) {
     for (int y = 0; y < map.getYsize(); y++) {
         for (int x = 0; x < map.getXsize(); x++) {
             // draw characters... hero and monster
-            char renderSymbol = '';
+            char renderSymbol;
             if (x == hero.getPosX() && y == hero.getPosY())
                 std::cout << hero.getCharacterSymbol();
             else if (checkMonsterPosition(x, y, enemy, renderSymbol))
@@ -205,13 +209,21 @@ int main() {
     map.createDungeon(80, 25, 50);
     // create hero and set him/her up
     GameCharacter* hero;
-    bool useKnight = true;
-    // TODO create a Knight or a Wizard hero depending on useKnight
-    if (useKnight) {
-        hero = new Knight();
+    int option;
+    int optionSword;
+    string name;
+    cout << "Press the number to chose your hero (otherwise it will be generate a knight):" << std::endl;
+    cout << "1)Wizard 2)Knight"<<std::endl;
+    std::cin >> option;
+
+    cout << "Choose a name:"<<std::endl;
+    std::cin >> name;
+
+    if (option == 1) {
+        hero = new Wizard(name);
     }
     else {
-        hero = new Wizard(20, false, 40);
+        hero = new Knight(name);
     }
 
     // find a legal start position
@@ -221,10 +233,13 @@ int main() {
     hero->setPosX(startX);
     hero->setPosY(startY);
     // create a weapon and give it to hero
-    bool useSword = true;
+
+    cout << "Press the number to chose your weapon (otherwise it will be generate a bow):" << std::endl;
+    cout << "1)Bow 2)Sword"<<std::endl;
+    std::cin >> optionSword;
     Weapon* weapon;
 
-    if (useSword) {
+    if (optionSword==2) {
         weapon = new Sword(20);
     }
     else {
@@ -234,8 +249,16 @@ int main() {
     hero->setWeapon(weapon);
     // create an enemy (an Orc or a Skeleton)
     GameCharacter* enemy;
-    // TODO create an orc
-    // TODO create a skeleton
+    bool useOrc = true;
+
+    if (useOrc)
+        enemy = new Orc(15);
+    else
+        enemy = new Skeleton(true);
+
+    //per pulire il buffer dagli input precedenti perchè rimane lo \n dopo aver premuto invio per i cin
+    std::cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+
     // find monster position not too far from hero position
     startX += 5;
     startY += 3;
@@ -244,19 +267,20 @@ int main() {
     enemy->setPosY(startY);
 
     // render
-    renderHUD(*hero);
+    renderHUD(*hero, *enemy);
     renderGame(map, *hero, *enemy);
     // game loop. See http://gameprogrammingpatterns.com/game-loop.html
     while (true) {
         // poll event
         GameEvent gameEvent = getEvent();
 
-        // update game status
         bool quit = updateGame(gameEvent, *hero, *enemy, map);
+
+        // update game status
         if (quit)
             return 0;
         // render
-        renderHUD(*hero);
+        renderHUD(*hero, *enemy);
         renderGame(map, *hero, *enemy);
     }
 

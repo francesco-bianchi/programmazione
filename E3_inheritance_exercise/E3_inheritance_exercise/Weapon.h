@@ -11,6 +11,8 @@ public:
     Weapon();
     explicit Weapon(int s, bool m = false);
 
+    virtual ~Weapon() = default; // catena di distruzione dalla classe  più derivata a quella base, = default per essere piu chiari
+
     virtual int use();
 
     void setStrength(int s) {

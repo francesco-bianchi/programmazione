@@ -115,6 +115,7 @@ int GameCharacter::receiveDamage(int points) {
         points = 1;
 
     HP -= points;
+
     if (points > 10)
         armor--;
 
@@ -124,8 +125,8 @@ int GameCharacter::receiveDamage(int points) {
 
 bool GameCharacter::isLegalFight(const GameCharacter &enemy) const {
     int maxDistance = 1;
-    if ((abs(posX - enemy.posX) > maxDistance) || (abs(posY - enemy.posY) > maxDistance))
-        return false;
+    //if ((abs(posX - enemy.posX) > maxDistance) || (abs(posY - enemy.posY) > maxDistance))
+        //return false;
     return true;
 }
 

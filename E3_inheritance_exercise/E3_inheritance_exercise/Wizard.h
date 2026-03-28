@@ -9,22 +9,20 @@
 using namespace std;
 #include "GameCharacter.h"
 
-// TODO extend GameCharacter
 class Wizard : public GameCharacter {
-    // TODO override fight. Use mana to change behaviour. 
-    // XXX it's already implemented in .cpp file
-
     // in this class do not override move()
-
+public:
     // in derived classes we can introduce new behaviours, like this brand new method:
-    Wizard(int hp, int a, int m=10, string n="Wizard") : GameCharacter(hp, a), mana(m), name(n) {};
+    explicit Wizard(int hp=20, int a=10, int m=10, string n="Wizy") : GameCharacter(hp, a), mana(m), name(n) {};
+
+    explicit Wizard(string n) : GameCharacter(20, 10), mana(10), name(n) {}
 
     int fight(GameCharacter &enemy) override; //override permette di dire che si sta leggendo nel metodo della classe base e si scrive le cose in più (se non lo trova errore)
 
     virtual void doMagic(); // it's virtual: we expect to further derive and override its behaviour in derived classes
 
     // override base class method
-    char getCharacterSymbol() const {
+    char getCharacterSymbol() const override{
         return 'W';
     }
 
