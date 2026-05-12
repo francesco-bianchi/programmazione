@@ -306,16 +306,16 @@ int main() {
         //map.loadFromFile("./res/start_map_corrupted2.txt"); // XXX should throw std::runtime_error
     }
     catch (GameFileException &e) {
-        std::cout << e.what();
+        std::cerr << e.what();
         if (e.getFatal())
             abort();
     }
     catch (std::runtime_error &e) {
-        std::cout << e.what();
+        std::cerr << e.what();
         abort();
     }
     catch (std::out_of_range &e) {
-        std::cout << e.what();
+        std::cerr << e.what();
         abort();
     }
 
