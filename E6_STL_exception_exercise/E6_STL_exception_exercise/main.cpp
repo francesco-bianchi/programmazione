@@ -291,10 +291,10 @@ void renderGame(Dungeon &map, GameCharacter &hero, std::vector<GameCharacter*> &
 
 
 int main() {
+    Dungeon map; // va al di fuori perché sennò a un tempo di vita uguale al controllo nel try-catch
     try {
         displaySplash();
         // create map
-        Dungeon map;
         map.createDungeon(80, 25, 50);
         std::string firstMap = "./res/start_map.txt";
         map.saveToFile(firstMap);
